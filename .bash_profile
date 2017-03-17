@@ -13,6 +13,7 @@ alias finder='open -a Finder ./'
 # if user is not root, pass all commands via sudo #
 if [ $UID -ne 0 ]; then
     alias reboot='sudo reboot'
+    alias shutdown='sudo shutdown -r now'
 fi
 
 # ***THEME***
