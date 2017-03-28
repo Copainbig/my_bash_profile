@@ -5,7 +5,13 @@ alias ll='ls -l'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias mkdir='mkdir -pv'
-alias myip=''curl ip.appspot.com'
+alias rimraf='rm -rf'
+alias ls='ls -aGFh'
+alias ll='ls -l'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias mkdir='mkdir -pv'
+alias myip='curl ip.appspot.com'
 alias cdhome='cd ~'
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -16,7 +22,7 @@ if [ $UID -ne 0 ]; then
     alias shutdown='sudo shutdown -r now'
 fi
 
-# ***THEME***
+#STYLE
 function prompt {
   local BLACK="\[\033[0;30m\]"
   local BLACKBOLD="\[\033[1;30m\]"
@@ -39,6 +45,9 @@ function prompt {
   export PS1="\n$RED\u $PURPLE@ $GREEN\h:\w $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\n   $BLUE[\t] → $RESETCOLOR"
   export PS2="$BLUE > $RESETCOLOR"
 }
+
+prompt
+
 prompt
 
 # *** PATH ***
