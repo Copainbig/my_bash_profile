@@ -39,5 +39,6 @@ function prompt {
   export PS1="\n$RED\u $PURPLE@ $GREEN\w $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null)\n $BLUE[\t] → $RESE$
   export PS2=" | → $RESETCOLOR"
 }
-
 prompt
+
+# *** PATH ***
