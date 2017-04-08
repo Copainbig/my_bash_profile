@@ -42,12 +42,12 @@ function prompt {
   local WHITEBOLD="\[\033[1;37m\]"
   local RESETCOLOR="\[\e[00m\]"
 
-  export PS1="\n$RED\u $PURPLE@ $GREEN\h:\w $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\n   $BLUE[\t] → $RESETCOLOR"
+  export PS1="\n$REDBOLD\u $PURPLE@ $GREEN\h:\w $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\n   $BLUEBOLD[\t] → $RESETCOLOR"
   export PS2="$BLUE > $RESETCOLOR"
 }
 
 prompt
 
-prompt
-
 # *** PATH ***
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/
+export PATH=$PATH:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin
