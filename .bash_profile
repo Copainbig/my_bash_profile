@@ -16,6 +16,7 @@ alias cdhome='cd ~'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias finder='open -a Finder ./'
+alias nano='nano -c'
 # if user is not root, pass all commands via sudo #
 if [ $UID -ne 0 ]; then
     alias reboot='sudo reboot'
@@ -48,6 +49,9 @@ function prompt {
 
 prompt
 
+#ls cmd output color
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
 # *** PATH ***
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/
-export PATH=$PATH:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$(/usr/libexec/java_home)/bin
